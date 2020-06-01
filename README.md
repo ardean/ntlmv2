@@ -1,6 +1,6 @@
 # ntlmv2
 
-> NTLM & NTLMv2 authentication/hash library for server / client
+> NTLM & NTLMv2 authentication / hash library for server / client
 
 [![Github Version](https://img.shields.io/github/release/ardean/ntlmv2.svg)](https://github.com/ardean/ntlmv2)
 [![NPM Version](https://img.shields.io/npm/v/ntlmv2.svg)](https://npmjs.org/package/ntlmv2)

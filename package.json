@@ -1,7 +1,7 @@
 {
   "name": "ntlmv2",
   "version": "0.1.1",
-  "description": "NTLM & NTLMv2 authentication/hash library for server / client",
+  "description": "NTLM & NTLMv2 authentication / hash library for server / client",
   "main": "./dist/index.js",
   "typings": "dist/index.d.ts",
   "repository": "https://github.com/ardean/ntlmv2",
