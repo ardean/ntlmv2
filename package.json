@@ -1,0 +1,45 @@
+{
+  "name": "ntlmv2",
+  "version": "0.1.1",
+  "description": "NTLM & NTLMv2 authentication/hash library for server / client",
+  "main": "./dist/index.js",
+  "typings": "dist/index.d.ts",
+  "repository": "https://github.com/ardean/ntlmv2",
+  "bugs": "https://github.com/ardean/ntlmv2/issues",
+  "scripts": {
+    "start": "nodemon",
+    "build": "rm -rf dist && tsc",
+    "test": "mocha -r ts-node/register test/*.spec.ts --exit"
+  },
+  "keywords": [
+    "ntlm",
+    "ntlmv2",
+    "nt",
+    "lanmanager",
+    "auth",
+    "authentication",
+    "samba",
+    "smb",
+    "smb2"
+  ],
+  "author": "ardean",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@types/chai": "^4.2.11",
+    "@types/mocha": "^7.0.2",
+    "@types/node": "^14.0.6",
+    "chai": "^4.2.0",
+    "chai-bytes": "^0.1.2",
+    "mocha": "^7.2.0",
+    "nodemon": "^2.0.4",
+    "ts-node": "^8.10.2",
+    "tslint": "^6.1.2",
+    "typescript": "^3.9.3"
+  },
+  "dependencies": {
+    "dtyp": "^0.1.1"
+  }
+}
