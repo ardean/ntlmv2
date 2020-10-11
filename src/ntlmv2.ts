@@ -226,7 +226,12 @@ export const serializeAuthenticationMessage = (
   hostname: string,
   domain: string,
   serverChallenge: Buffer,
-  password: string
+  password: string,
+  negotiateFlags: number = (
+    NegotiateFlag.UnicodeEncoding |
+    NegotiateFlag.NTLMSessionSecurity |
+    NegotiateFlag.AlwaysSign
+  )
 ) => {
   hostname = hostname.toUpperCase();
   domain = domain.toUpperCase();
@@ -277,9 +282,6 @@ export const serializeAuthenticationMessage = (
   buffer.writeUInt32LE(messageLength, offset);
   offset += 4;
 
-  const negotiateFlags = NegotiateFlag.UnicodeEncoding |
-    NegotiateFlag.NTLMSessionSecurity |
-    NegotiateFlag.AlwaysSign;
   buffer.writeUInt32LE(negotiateFlags, offset);
   offset += 4;
 
