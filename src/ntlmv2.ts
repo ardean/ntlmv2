@@ -457,12 +457,8 @@ export const createV2Hash = (domain: string, username: string, password: string)
 };
 
 export const createLmV2Response = (password: string, serverChallenge: Buffer, clientChallenge: Buffer, domain: string, username: string) => {
-  const v2Hash = createV2Hash(domain, username, password);
-
-  const challengeBuffer = Buffer.concat([serverChallenge, clientChallenge]);
-  const md5Buffer = createMd5HmacBuffer(challengeBuffer, v2Hash);
-
-  return Buffer.concat([md5Buffer, clientChallenge]);
+  const ntV2Proof = createNtV2Proof(password, serverChallenge, clientChallenge, domain, username);
+  return Buffer.concat([ntV2Proof, clientChallenge]);
 };
 
 export const createNtV2Proof = (password: string, serverChallenge: Buffer, clientChallenge: Buffer, domain: string, username: string) => {
